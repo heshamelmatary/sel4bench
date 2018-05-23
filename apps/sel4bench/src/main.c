@@ -241,12 +241,11 @@ find_timer_caps(env_t *env)
 void *
 main_continued(void *arg)
 {
-
     setup_fault_handler(&global_env);
 
     /* find an untyped for the process to use */
     find_untyped(&global_env.vka, &global_env.untyped);
-    find_timer_caps(&global_env);
+    //find_timer_caps(&global_env);
 
     /* list of benchmarks */
     benchmark_t *benchmarks[] = {
