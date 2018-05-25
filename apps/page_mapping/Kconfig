@@ -22,6 +22,7 @@ config APP_PAGEMAPPINGBENCH
     depends on (ARCH_X86 && EXPORT_PMC_USER && KERNEL_X86_DANGEROUS_MSR) || \
         (ARCH_ARM && EXPORT_PMU_USER) || \
         (ARCH_ARM_V6 && DANGEROUS_CODE_INJECTION) || \
-        (ARM_CORTEX_A8 && DANGEROUS_CODE_INJECTION)
+        (ARM_CORTEX_A8 && DANGEROUS_CODE_INJECTION) || \
+        (ARCH_RISCV)
     help
         Application to benchmark seL4 mapping a series of pages.
